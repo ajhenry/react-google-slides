@@ -1,4 +1,4 @@
-# React-Google-Slides
+# react-google-slides
 
 A very thin wrapper for displaying Google Slides with React
 
