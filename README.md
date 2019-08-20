@@ -1,30 +1,47 @@
-# react-google-slides
+# React-Google-Slides
 
-> A very thin wrapper for displaying Google Slides with React
+A very thin wrapper for displaying Google Slides with React
 
-[![NPM](https://img.shields.io/npm/v/react-google-slides.svg)](https://www.npmjs.com/package/react-google-slides) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
-## Install
+## Installation
 
 ```bash
-npm install --save react-google-slides
+npm i react-google-slides
+```
+
+```bash
+yarn add react-google-slides
 ```
 
 ## Usage
 
 ```tsx
-import * as React from 'react'
+import * as React from "react";
 
-import MyComponent from 'react-google-slides'
+import ReactGoogleSlides from "react-google-slides";
 
 class Example extends React.Component {
-  render () {
+  render() {
     return (
-      <MyComponent />
-    )
+      <ReactGoogleSlides
+        width={640}
+        height={480}
+        slidesLink="https://docs.google.com/presentation/d/172oFC8-LBw0GQEymFDbTBn-ORh7wi2ByfUXrXm7H-AM"
+        slideDuration={5}
+        showControls
+        loop
+      />
+    );
   }
 }
 ```
+
+Check out the [examples](/examples) folder for some more usage
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
 
 ## License
 
