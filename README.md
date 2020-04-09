@@ -31,7 +31,7 @@ const SlideShow = () => {
 }
 ```
 
-Check out the [example](https://github.com/AJHenry/react-google-slides/blob/master/example/src/App.js) app for some more usage
+Check out the [example](https://github.com/AJHenry/react-google-slides/blob/master/example/src/App.tsx) app for some more usage
 
 ## Contributing
 
