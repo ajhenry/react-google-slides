@@ -15,23 +15,19 @@ yarn add react-google-slides
 ## Usage
 
 ```tsx
-import * as React from "react";
-
 import ReactGoogleSlides from "react-google-slides";
 
-class Example extends React.Component {
-  render() {
-    return (
-      <ReactGoogleSlides
-        width={640}
-        height={480}
-        slidesLink="https://docs.google.com/presentation/d/172oFC8-LBw0GQEymFDbTBn-ORh7wi2ByfUXrXm7H-AM"
-        slideDuration={5}
-        showControls
-        loop
-      />
-    );
-  }
+const SlideShow = () => {
+  return (
+    <ReactGoogleSlides
+      width={640}
+      height={480}
+      slidesLink="https://docs.google.com/presentation/d/172oFC8-LBw0GQEymFDbTBn-ORh7wi2ByfUXrXm7H-AM"
+      slideDuration={5}
+      showControls
+      loop
+    />
+  );
 }
 ```
 

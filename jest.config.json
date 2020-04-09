@@ -1,0 +1,5 @@
+{
+  "preset": "ts-jest",
+  "moduleFileExtensions": ["ts", "tsx", "json", "node", "jsx", "js"],
+  "testPathIgnorePatterns": ["/node_modules/", "/example/"]
+}
