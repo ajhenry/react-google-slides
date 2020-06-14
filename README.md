@@ -39,6 +39,15 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
+There is an example app you can test your changes with
+
+```sh
+cd example && yarn
+yarn start
+```
+
+This will start the example app at http://localhost:3000/
+
 ## License
 
 MIT © [AJHenry](https://github.com/AJHenry)
