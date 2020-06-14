@@ -1,6 +1,6 @@
 {
   "name": "react-google-slides",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "A very thin wrapper for displaying Google Slides with React",
   "author": "AJHenry",
   "license": "MIT",
