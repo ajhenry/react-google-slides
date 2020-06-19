@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export type ReactGoogleSlidesProps = {
   slidesLink: string;
@@ -25,15 +25,19 @@ const constructUrl = (
 ): string => {
   if (!presentationKey) {
     throw new Error(
-      "Failed to fetch presentation key, check the presentation url"
+      'Failed to fetch presentation key, check the presentation url'
     );
   }
 
-  let baseUrl = "https://docs.google.com/presentation/d/";
+  let baseUrl = 'https://docs.google.com/presentation/d/';
   baseUrl += `${presentationKey}/embed?`;
-  baseUrl += `start=true`;
-  baseUrl += `&loop=${loop ? "true" : "false"}`;
-  baseUrl += `&delayms=${slideDuration * 1000}`;
+  baseUrl += `loop=${loop ? 'true' : 'false'}`;
+
+  // If slide duration given, add it
+  if (slideDuration) {
+    baseUrl += `&start=true`;
+    baseUrl += `&delayms=${slideDuration * 1000}`;
+  }
 
   if (!showControls) {
     baseUrl += `&rm=minimal`;
@@ -55,16 +59,16 @@ const extractSlidesKey = (slidesUrl: string): string | null => {
 
 // Calculates dimension for string/numbers
 const calcDimension = (dim: string | null | number): string =>
-  dim ? (typeof dim === "number" ? `${dim}px` : dim) : `480px`;
+  dim ? (typeof dim === 'number' ? `${dim}px` : dim) : `480px`;
 
 const ReactGoogleSlides: React.FC<ReactGoogleSlidesProps> = ({
   slidesLink,
   loop = false,
-  slideDuration = 2,
+  slideDuration = null,
   showControls = false,
-  width = "640px",
-  height = "480px",
-  containerStyle = null,
+  width = '640px',
+  height = '480px',
+  containerStyle = null
 }: ReactGoogleSlidesProps) => {
   const presentationKey = extractSlidesKey(slidesLink);
   const url = constructUrl(presentationKey, loop, slideDuration, showControls);

@@ -9,7 +9,7 @@ body {
   width: 100%;
 }
 
-.container > div {
+.container * {
   display: flex;
   flex-direction: column;
   justify-content: center;
