@@ -1,6 +1,6 @@
 {
   "name": "react-google-slides-example",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "private": true,
   "homepage": "http://ajhenry.github.io/react-google-slides",
   "dependencies": {
