@@ -2,6 +2,8 @@
 
 A very thin wrapper for displaying Google Slides with React
 
+[NPM](https://www.npmjs.com/package/react-google-slides)
+
 ## Installation
 
 ```bash
