@@ -26,6 +26,7 @@ const SlideShow = () => {
       height={480}
       slidesLink="https://docs.google.com/presentation/d/172oFC8-LBw0GQEymFDbTBn-ORh7wi2ByfUXrXm7H-AM"
       slideDuration={5}
+      position={1}
       showControls
       loop
     />

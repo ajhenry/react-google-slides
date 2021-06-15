@@ -5,6 +5,7 @@ export type ReactGoogleSlidesProps = {
   loop?: boolean;
   slideDuration?: number;
   showControls?: boolean;
+  position?: number;
   height?: string | number;
   width?: string | number;
   containerStyle?: object | null;
@@ -21,7 +22,8 @@ const constructUrl = (
   presentationKey: string | null,
   loop: boolean,
   slideDuration: number,
-  showControls: boolean
+  showControls: boolean,
+  position: number,
 ): string => {
   if (!presentationKey) {
     throw new Error(
@@ -41,6 +43,10 @@ const constructUrl = (
 
   if (!showControls) {
     baseUrl += `&rm=minimal`;
+  }
+
+  if (position) {
+    baseUrl += `&slide=${position}`;
   }
 
   return baseUrl;
@@ -66,12 +72,13 @@ const ReactGoogleSlides: React.FC<ReactGoogleSlidesProps> = ({
   loop = false,
   slideDuration = null,
   showControls = false,
+  position = null,  
   width = '640px',
   height = '480px',
   containerStyle = null
 }: ReactGoogleSlidesProps) => {
   const presentationKey = extractSlidesKey(slidesLink);
-  const url = constructUrl(presentationKey, loop, slideDuration, showControls);
+  const url = constructUrl(presentationKey, loop, slideDuration, showControls, position);
 
   return (
     <iframe
