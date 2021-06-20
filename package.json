@@ -1,6 +1,6 @@
 {
   "name": "react-google-slides",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "description": "A very thin wrapper for displaying Google Slides with React",
   "author": "AJHenry",
   "license": "MIT",
@@ -22,8 +22,8 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "react": "^15.0.0 || ^16.0.0",
-    "react-dom": "^15.0.0 || ^16.0.0"
+    "react": "^15.0.0 || ^16.0.0 || ^17.0.0",
+    "react-dom": "^15.0.0 || ^16.0.0 || ^17.0.0"
   },
   "devDependencies": {
     "@types/enzyme": "^3.10.5",

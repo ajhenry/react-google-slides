@@ -34,7 +34,75 @@ const SlideShow = () => {
 }
 ```
 
-Check out the [example](https://github.com/AJHenry/react-google-slides/blob/master/example/src/App.tsx) app for some more usage
+## Props
+
+### Prop Types
+
+```ts
+interface ReactGoogleSlidesProps {
+  slidesLink: string;
+  loop?: boolean;
+  slideDuration?: number;
+  showControls?: boolean;
+  position?: number;
+  height?: string | number;
+  width?: string | number;
+  containerStyle?: object;
+};
+```
+
+#### slidesLink
+
+Type: `string` - **required**
+
+Link to the google slides presentation
+
+#### loop
+
+Type: `boolean`\
+Default: `false`
+
+Loops the slideshow after the presentation is finished
+
+#### slideDuration
+
+Type: `number`\
+Default: `project default`
+
+
+The duration for each slide to show on screen, this applies to _all_ of the slides
+
+#### showControls
+
+Type: `boolean`\
+Default: `false`
+
+Toggles the slideshow controls at the bottom of the screen
+
+#### position
+
+Type: `number`\
+Default: `0`
+
+What slide to start the slideshow on
+
+#### height
+
+Type: `number|string`
+
+Height of the player, i.e. "100%" or `100` for pixels
+
+#### width
+
+Type: `number|string`
+
+Width of the player, i.e. "100%" or `100` for pixels
+
+#### containerStyle
+
+Type: `object`
+
+React Stylesheet to pass in to use as the container style
 
 ## Contributing
 
