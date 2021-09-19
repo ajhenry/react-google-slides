@@ -2,6 +2,8 @@
 
 A very thin wrapper for displaying Google Slides with React
 
+[Demo](https://ajhenry.github.io/react-google-slides/)
+
 [NPM](https://www.npmjs.com/package/react-google-slides)
 
 ## Installation
