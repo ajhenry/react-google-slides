@@ -1,6 +1,6 @@
+import { shallow } from 'enzyme';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { shallow } from 'enzyme';
 import ReactGoogleSlides from '.';
 
 describe('ReactGoogleSlides', () => {
@@ -12,9 +12,9 @@ describe('ReactGoogleSlides', () => {
     );
   });
 
-  it('throws an error on invalid presentation key', async () => {
+  it('renders an error component when one is specified', async () => {
     expect(() =>
-      shallow(<ReactGoogleSlides slidesLink="throw" />)
+      shallow(<ReactGoogleSlides slidesLink="bad-link" />)
     ).toThrowError();
   });
 });

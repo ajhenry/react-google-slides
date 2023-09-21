@@ -15,6 +15,7 @@
   "exclude": [
     "node_modules",
     "**/*.spec.ts",
+    "**/*.spec.tsx",
     "dist",
     "src/setupTests.ts"
   ]

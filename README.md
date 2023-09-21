@@ -50,8 +50,11 @@ interface ReactGoogleSlidesProps {
   height?: string | number;
   width?: string | number;
   containerStyle?: object;
+  ErrorComponent?: React.ReactNode | React.ElementType;
 };
 ```
+
+This prop also supports all of the props that the iframe element supports, such as `allowFullScreen` and `allow`. Take a look at `React.HTMLProps<HTMLIFrameElement>` for more information.
 
 #### slidesLink
 
@@ -106,6 +109,12 @@ Type: `object`
 
 React Stylesheet to pass in to use as the container style
 
+#### ErrorComponent
+
+Type: `React.ReactNode | React.ElementType`
+
+React Component to render when there is an invalid presentation key provided
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
@@ -119,7 +128,7 @@ cd example && yarn
 yarn start
 ```
 
-This will start the example app at http://localhost:3000/
+This will start the example app at <http://localhost:3000/>
 
 ## License
 

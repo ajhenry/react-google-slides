@@ -38,6 +38,36 @@ const App = () => {
           loop
         />
       </div>
+      <h1>Invalid link with ErrorComponent</h1>
+      <div style={{ padding: 20 }}>
+        <ReactGoogleSlides
+          slidesLink="bad-link"
+          width={300}
+          height={300}
+          loop
+          ErrorComponent={
+            <div style={{ padding: 20 }}>
+              <h3>Something went wrong :(</h3>
+            </div>
+          }
+        />
+      </div>
+      <h1>Using default iframe props</h1>
+      <div style={{ padding: 20 }}>
+        <ReactGoogleSlides
+          slidesLink="https://docs.google.com/presentation/d/172oFC8-LBw0GQEymFDbTBn-ORh7wi2ByfUXrXm7H-AM"
+          width={300}
+          height={300}
+          loop
+          className="my-class"
+          id="my-id"
+          ErrorComponent={
+            <div style={{ padding: 20 }}>
+              <h3>Something went wrong :(</h3>
+            </div>
+          }
+        />
+      </div>
     </div>
   );
 };
