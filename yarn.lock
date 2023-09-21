@@ -521,19 +521,19 @@
     "@babel/types" "^7.3.0"
 
 "@types/cheerio@*":
-  version "0.22.30"
-  resolved "https://registry.yarnpkg.com/@types/cheerio/-/cheerio-0.22.30.tgz#6c1ded70d20d890337f0f5144be2c5e9ce0936e6"
-  integrity sha512-t7ZVArWZlq3dFa9Yt33qFBQIK4CQd1Q3UJp0V+UhP6vgLWLM6Qug7vZuRSGXg45zXeB1Fm5X2vmBkEX58LV2Tw==
+  version "0.22.32"
+  resolved "https://registry.yarnpkg.com/@types/cheerio/-/cheerio-0.22.32.tgz#1a41608fd072544c3ed6c0d6cc3fcf08d07715de"
+  integrity sha512-4RrpCp5ufWTLb6/1RCOjazRhUM6DTD79l763det29n8kLmPB7XeN46cxlUf2GsSF+0g6CbWT5nYl8C/Gs15bdg==
   dependencies:
     "@types/node" "*"
 
 "@types/enzyme@^3.10.5":
-  version "3.10.9"
-  resolved "https://registry.yarnpkg.com/@types/enzyme/-/enzyme-3.10.9.tgz#b2d7c7429a37d994c156b6f361e83f271a60c8aa"
-  integrity sha512-dx5UvcWe2Vtye6S9Hw2rFB7Ul9uMXOAje2FAbXvVYieQDNle9qPAo7DfvFMSztZ9NFiD3dVZ4JsRYGTrSLynJg==
+  version "3.10.13"
+  resolved "https://registry.yarnpkg.com/@types/enzyme/-/enzyme-3.10.13.tgz#332c0ed59b01f7b1c398c532a1c21a5feefabeb1"
+  integrity sha512-FCtoUhmFsud0Yx9fmZk179GkdZ4U9B0GFte64/Md+W/agx0L5SxsIIbhLBOxIb9y2UfBA4WQnaG1Od/UsUQs9Q==
   dependencies:
     "@types/cheerio" "*"
-    "@types/react" "*"
+    "@types/react" "^16"
 
 "@types/graceful-fs@^4.1.2":
   version "4.1.5"
@@ -596,15 +596,6 @@
   integrity sha512-FIX2AVmPTGP30OUJ+0vadeIFJJ07Mh1m+U0rxfgyW34p3rTlXI+nlenvAxNn4BP36YyI9IJ/+UJ7Wu22N1pI7A==
   dependencies:
     "@types/react" "^16"
-
-"@types/react@*":
-  version "17.0.21"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.21.tgz#069c43177cd419afaab5ce26bb4e9056549f7ea6"
-  integrity sha512-GzzXCpOthOjXvrAUFQwU/svyxu658cwu00Q9ugujS4qc1zXgLFaO0kS2SLOaMWLt2Jik781yuHCWB7UcYdGAeQ==
-  dependencies:
-    "@types/prop-types" "*"
-    "@types/scheduler" "*"
-    csstype "^3.0.2"
 
 "@types/react@^16", "@types/react@^16.9.32":
   version "16.14.15"

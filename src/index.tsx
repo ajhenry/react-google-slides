@@ -1,6 +1,6 @@
 import React from 'react';
 
-export type ReactGoogleSlidesProps = {
+interface BaseReactGoogleSlidesProps {
   slidesLink: string;
   loop?: boolean;
   slideDuration?: number;
@@ -9,7 +9,11 @@ export type ReactGoogleSlidesProps = {
   height?: string | number;
   width?: string | number;
   containerStyle?: object | null;
-};
+  ErrorComponent?: React.ReactNode | React.ElementType;
+}
+
+export type ReactGoogleSlidesProps = BaseReactGoogleSlidesProps &
+  React.HTMLProps<HTMLIFrameElement>;
 
 /**
  * Generates iframe compatible url to display the presentation
@@ -23,14 +27,8 @@ const constructUrl = (
   loop: boolean,
   slideDuration: number,
   showControls: boolean,
-  position: number,
+  position: number
 ): string => {
-  if (!presentationKey) {
-    throw new Error(
-      'Failed to fetch presentation key, check the presentation url'
-    );
-  }
-
   let baseUrl = 'https://docs.google.com/presentation/d/';
   baseUrl += `${presentationKey}/embed?`;
   baseUrl += `loop=${loop ? 'true' : 'false'}`;
@@ -72,13 +70,25 @@ const ReactGoogleSlides: React.FC<ReactGoogleSlidesProps> = ({
   loop = false,
   slideDuration = null,
   showControls = false,
-  position = null,  
+  position = null,
   width = '640px',
   height = '480px',
-  containerStyle = null
-}: ReactGoogleSlidesProps) => {
+  containerStyle = null,
+  ErrorComponent,
+  ...props
+}) => {
   const presentationKey = extractSlidesKey(slidesLink);
-  const url = constructUrl(presentationKey, loop, slideDuration, showControls, position);
+  const url = constructUrl(
+    presentationKey,
+    loop,
+    slideDuration,
+    showControls,
+    position
+  );
+
+  if (!presentationKey && ErrorComponent) {
+    return <>{ErrorComponent}</>;
+  }
 
   return (
     <iframe
@@ -87,6 +97,7 @@ const ReactGoogleSlides: React.FC<ReactGoogleSlidesProps> = ({
       height={calcDimension(height)}
       style={containerStyle ? containerStyle : { border: 0 }}
       allowFullScreen={true}
+      {...props}
     />
   );
 };
